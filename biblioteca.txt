@@ -1,0 +1,12 @@
+apt update
+apt upgrade
+apt install net-tools telnet iputils-ping vim curl wget -y
+apt install python3
+apt install pip -y
+apt install python3-flask
+apt install python3-flask-sqlalchemy
+apt install python3-pandas
+apt install python3-SQLAlchemy
+apt install sqlite3
+apt install python3-xlsxwriter
+

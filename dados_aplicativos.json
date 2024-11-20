@@ -1,0 +1,73 @@
+[
+    {
+        "nome": "App1",
+        "descricao": "Aplicativo de produtividade",
+        "versao": "1.0",
+        "desenvolvedor": "Desenvolvedor A",
+        "data_lancamento": "2024-01-15"
+    },
+    {
+        "nome": "App2",
+        "descricao": "Aplicativo de jogos",
+        "versao": "2.3",
+        "desenvolvedor": "Desenvolvedor B",
+        "data_lancamento": "2023-11-30"
+    },
+    {
+        "nome": "App3",
+        "descricao": "Aplicativo de educação",
+        "versao": "1.1",
+        "desenvolvedor": "Desenvolvedor C",
+        "data_lancamento": "2022-08-25"
+    },
+    {
+        "nome": "App4",
+        "descricao": "Aplicativo de redes sociais",
+        "versao": "4.0",
+        "desenvolvedor": "Desenvolvedor D",
+        "data_lancamento": "2024-05-10"
+    },
+    {
+        "nome": "App5",
+        "descricao": "Aplicativo de saúde",
+        "versao": "3.2",
+        "desenvolvedor": "Desenvolvedor E",
+        "data_lancamento": "2023-09-05"
+    },
+    {
+        "nome": "App6",
+        "descricao": "Aplicativo de clima",
+        "versao": "2.1",
+        "desenvolvedor": "Desenvolvedor F",
+        "data_lancamento": "2024-03-14"
+    },
+    {
+        "nome": "App7",
+        "descricao": "Aplicativo de viagens",
+        "versao": "1.9",
+        "desenvolvedor": "Desenvolvedor G",
+        "data_lancamento": "2023-12-20"
+    },
+    {
+        "nome": "App8",
+        "descricao": "Aplicativo de finanças",
+        "versao": "2.0",
+        "desenvolvedor": "Desenvolvedor H",
+        "data_lancamento": "2024-07-01"
+    },
+    {
+        "nome": "App9",
+        "descricao": "Aplicativo de fitness",
+        "versao": "1.8",
+        "desenvolvedor": "Desenvolvedor I",
+        "data_lancamento": "2022-10-17"
+    },
+    {
+        "nome": "App10",
+        "descricao": "Aplicativo de fotografia",
+        "versao": "3.0",
+        "desenvolvedor": "Desenvolvedor J",
+        "data_lancamento": "2023-02-25"
+    }
+]
+
