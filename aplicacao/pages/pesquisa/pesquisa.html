@@ -8,27 +8,27 @@
 <body>
     <div class="container">
         <header>
-            <h1>Pesquisa de Álbums</h1>
+            <h1>Pesquisa de Álbuns</h1>
             <p>Encontre o álbum que você deseja</p>
         </header>
 
         <form method="POST">
             <div class="form-group">
-                <input type="text" name="nome" placeholder="Digite o nome do aplicativo" required>
+                <input type="text" name="nome" placeholder="Digite o nome do álbum" required>
                 <button type="submit" class="music-btn">Pesquisar</button>
             </div>
         </form>
 
-        {% if aplicativos %}
+        {% if álbuns %}
             <section class="results">
                 <h2>Resultados da Pesquisa:</h2>
                 <ul>
                     {% for album in albuns %}
                         <li class="app-card">
-                            <strong>{{ Nome }}</strong><br>
-                            <span>Genero: {{ aplicativo.descricao }}</span><br>
-                            <span>Artista: {{ aplicativo.versao }}</span><br>
-                            <span>Data de Lançamento: {{ aplicativo.data_lancamento }}</span><br>
+                            <strong>{{ album.nome }}</strong><br>
+                            <span>Genero: {{ album.genero }}</span><br>
+                            <span>Artista: {{ album.artista }}</span><br>
+                            <span>Data de Lançamento: {{ album.data_lancamento }}</span><br>
                             <span>Musicas: {{ musicas }}</span>
                         </li>
                     {% endfor %}

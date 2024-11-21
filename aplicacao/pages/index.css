@@ -9,7 +9,7 @@
 /* Corpo da página */
 body {
     background: linear-gradient(135deg, #6a0dad, #2f2f2f); /* Gradiente roxo e preto */
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;

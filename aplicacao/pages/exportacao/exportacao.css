@@ -9,9 +9,8 @@
 /* Corpo da página */
 body {
     background: linear-gradient(135deg, #6a0dad, #2f2f2f); /* Gradiente roxo e preto */
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
@@ -79,7 +78,6 @@ input[type="text"]:focus {
 button.music-btn {
     background-color: #3b3b3b; /* Roxo escuro */
     color: white;
-    text-align: center;
     border: none;
     border-radius: 50px;
     padding: 15px 30px;
