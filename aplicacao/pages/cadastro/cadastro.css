@@ -1,0 +1,134 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #6a0dad, #2f2f2f); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center;    /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    width: 100%;
+    min-height: 100vh;
+    text-align: center; /* Centraliza textos dentro dos elementos */
+}
+
+h1 {
+    text-align: center; /* Centraliza texto e elementos filhos */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Formulário */
+form {
+    background-color: #3b3b3b;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    resize: none;
+    height: 70px;
+}
+
+input:focus {
+    background-color: #5a2e8b;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+input{
+    width: 300px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #444;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+input[type="submit"] {
+    width: 80%;
+    padding: 10px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #666666; /* Roxo mais claro no hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+/* Link */
+.back-link {
+    text-align: center;
+    display: inline-block;
+    margin-top: 30px;
+    color: #ddd;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid #6a0dad;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #6a0dad;
+    color: white;
+    
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], input[type="date"], textarea {
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

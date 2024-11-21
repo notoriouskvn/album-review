@@ -79,6 +79,7 @@ input[type="text"]:focus {
 button.music-btn {
     background-color: #3b3b3b; /* Roxo escuro */
     color: white;
+    text-align: center;
     border: none;
     border-radius: 50px;
     padding: 15px 30px;
@@ -86,7 +87,7 @@ button.music-btn {
     font-weight: 600;
     width: 200px;
     cursor: pointer;
-    display: flex;
+    
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
@@ -98,6 +99,7 @@ button.music-btn:hover {
     background-color: #666666; /* Roxo mais claro no hover */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
     transform: translateY(-4px);
+    text-align: center;
 }
 
 button.music-btn:active {

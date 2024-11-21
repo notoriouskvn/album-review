@@ -91,6 +91,7 @@ h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
 }
 
 .album-list {

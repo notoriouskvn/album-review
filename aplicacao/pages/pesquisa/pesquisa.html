@@ -23,22 +23,22 @@
             <section class="results">
                 <h2>Resultados da Pesquisa:</h2>
                 <ul>
-                    {% for aplicativo in aplicativos %}
+                    {% for album in albuns %}
                         <li class="app-card">
-                            <strong>{{ aplicativo.nome }}</strong><br>
-                            <span>Descrição: {{ aplicativo.descricao }}</span><br>
-                            <span>Versão: {{ aplicativo.versao }}</span><br>
-                            <span>Desenvolvedor: {{ aplicativo.desenvolvedor }}</span><br>
-                            <span>Data de Lançamento: {{ aplicativo.data_lancamento }}</span>
+                            <strong>{{ Nome }}</strong><br>
+                            <span>Genero: {{ aplicativo.descricao }}</span><br>
+                            <span>Artista: {{ aplicativo.versao }}</span><br>
+                            <span>Data de Lançamento: {{ aplicativo.data_lancamento }}</span><br>
+                            <span>Musicas: {{ musicas }}</span>
                         </li>
                     {% endfor %}
                 </ul>
             </section>
         {% else %}
-            <p class="no-results">Nenhum aplicativo encontrado.</p>
+            <p class="no-results">Nenhum album encontrado.</p>
         {% endif %}
-
-        <a href="index.html" class="back-link">Voltar para a Tela Principal</a>
+<br>
+        <a href="../index.html" class="back-link">Voltar para a Tela Principal</a>
     </div>
 </body>
 </html>
