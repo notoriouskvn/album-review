@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Aplicativos</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro de Álbum</title>
 </head>
-<body>
-    <h1>Cadastro de Aplicativos</h1>
-    <form action="/cadastro" method="post">
-        <label for="nome">Nome do Aplicativo:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
+<body> 
+    <div class="container">
+        <header>
+            <h1>Cadastro de Álbum</h1>
+        </header>
 
-        <label for="descricao">Descrição:</label><br>
-        <textarea id="descricao" name="descricao" required></textarea><br><br>
+        <form action="cadastro.html" method="post">
+            <label for="nome">Nome do Álbum:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
 
-        <label for="versao">Versão:</label><br>
-        <input type="text" id="versao" name="versao" required><br><br>
+            <label for="genero">Gênero:</label><br>
+            <input type="text" id="genero" name="genero" required></input><br><br>
 
-        <label for="desenvolvedor">Desenvolvedor:</label><br>
-        <input type="text" id="desenvolvedor" name="desenvolvedor" required><br><br>
+            <label for="artista">Artista:</label><br>
+            <input type="text" id="artista" name="artista" required><br><br>
 
-        <label for="data_lancamento">Data de Lançamento:</label><br>
-        <input type="date" id="data_lancamento" name="data_lancamento" required><br><br>
+            <label for="data_lancamento">Data de Lançamento:</label><br>
+            <input type="date" id="data_lancamento" name="data_lancamento" required><br><br>
 
-        <input type="submit" value="Cadastrar">
-    </form>
-    <a href="/">Voltar para a Tela Principal</a>
+            <label for="musicas">Músicas:</label><br>
+            <input type="text" id="musicas" name="musicas" required><br><br>
+
+            <input type="submit" value="Cadastrar">
+        </form>
+        <br>
+        <a href="index.html">Voltar para a Tela Principal</a>
+    </div>
 </body>
 </html>
 
