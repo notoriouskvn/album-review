@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de Dados</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Corpo da página */
+        body {
+            background: linear-gradient(135deg, #6a0dad, #2f2f2f); /* Gradiente roxo e preto */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+        }
+
+        /* Container principal */
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 1000px;
+            padding: 30px;
+        }
+
+        /* Cabeçalho */
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Estilo dos botões */
+        button {
+            background-color: #3b3b3b; /* Roxo */
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 20px; /* Move o botão para baixo */
+        }
+
+        button:hover {
+            background-color: #666666; /* Roxo mais claro no hover */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            transform: translateY(-4px);
+        }
+
+        button:active {
+            background-color: #000000; /* Roxo escuro ao clicar */
+            transform: translateY(2px);
+        }
+
+        /* Estilo do link */
+        a {
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #ddd;
+        }
+
+        /* Estilo para o campo de input */
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #3b3b3b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        input[type="file"]:hover {
+            background-color: #666666;
+        }
+
+        /* Usar flexbox para organizar o layout */
+        form {
+            display: flex;
+            flex-direction: column;  /* Alinha os itens verticalmente */
+            align-items: center;     /* Centraliza os itens horizontalmente */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Carga de Dados</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file">Escolha um arquivo JSON:</label><br>
+            <input type="file" name="file" id="file" accept=".json" required><br>
+            <button type="submit">Carregar Dados</button>
+        </form>
+        <a href="/">Voltar para a Tela Principal</a>
+    </div>
+</body>
+</html>
+
