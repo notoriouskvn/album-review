@@ -2,16 +2,25 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Exportação de Dados</title>
+    <link rel="stylesheet" href="exportacao.css">
+    <title>Exportar Álbums</title>
 </head>
 <body>
-    <h1>Exportação de Dados</h1>
-    <form method="POST">
-        <label for="nome_arquivo">Digite o nome do arquivo para exportação:</label>
-        <input type="text" name="nome_arquivo" id="nome_arquivo" required>
-        <button type="submit">Exportar Dados</button>
-    </form>
-    <a href="/">Voltar para a Tela Principal</a>
+    <div class="container">
+        <header>
+            <h1>Exportar Álbum</h1>
+            <p>Digite o nome do álbum para exportação.</p>
+        </header>
+
+        <form method="POST">
+            <div class="form-group">
+                <label for="nome_arquivo">Nome do Álbum:</label>
+                <input type="text" name="nome_arquivo" id="nome_arquivo" required>
+            </div>
+            <button type="submit" class="music-btn">Exportar Álbum</button>
+        </form>
+
+        <a href="index.html" class="back-link">Voltar para a Tela Inicial</a>
+    </div>
 </body>
 </html>
-

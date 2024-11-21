@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background: linear-gradient(135deg, #6a0dad, #2f2f2f); /* Gradiente roxo e preto */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+/* Container principal */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+}
+
+/* Cabeçalho */
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ddd;
+}
+
+/* Estilo do formulário */
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 1rem;
+    color: #ddd;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #444;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    background-color: #5a2e8b;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+/* Botão de Exportação */
+button.music-btn {
+    background-color: #3b3b3b; /* Roxo escuro */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+button.music-btn:hover {
+    background-color: #666666; /* Roxo mais claro no hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px);
+}
+
+button.music-btn:active {
+    background-color: #000000; /* Roxo escuro ao clicar */
+    transform: translateY(2px);
+}
+
+/* Link de Voltar */
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #ddd;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 2px solid #6a0dad;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #6a0dad;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    button.music-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.875rem;
+    }
+
+    button.music-btn {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+}

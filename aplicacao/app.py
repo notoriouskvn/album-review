@@ -16,36 +16,36 @@ db = SQLAlchemy(app)
 class Aplicativo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(100), nullable=False)
-    descricao = db.Column(db.Text, nullable=False)
-    versao = db.Column(db.String(20), nullable=False)
-    desenvolvedor = db.Column(db.String(100), nullable=False)
-    data_lancamento = db.Column(db.String(10), nullable=False)  # Você pode usar Date se preferir
+    genero = db.Column(db.String(20), nullable=False)
+    artista = db.Column(db.String(20), nullable=False)
+    data_lancamento = db.Date(db.String(10), nullable=False)
+    musicas = db.Column(db.String(1000), nullable=False) 
 
 # Criação do banco de dados
 with app.app_context():
     db.create_all()
 
-@app.route('/')
+@app.route('cadastro.html')
 def home():
     return render_template('index.html')
 
-@app.route('/cadastro', methods=['GET', 'POST'])
+@app.route('cadastro.html', methods=['GET', 'POST'])
 def cadastro():
     if request.method == 'POST':
         # Obter dados do formulário
         nome = request.form['nome']
-        descricao = request.form['descricao']
-        versao = request.form['versao']
-        desenvolvedor = request.form['desenvolvedor']
+        genero = request.form['genero']
+        artista = request.form['artista']
         data_lancamento = request.form['data_lancamento']
+        musicas = request.form['musicas']
 
         # Criar uma nova instância de Aplicativo
         novo_aplicativo = Aplicativo(
-            nome=nome,
-            descricao=descricao,
-            versao=versao,
-            desenvolvedor=desenvolvedor,
-            data_lancamento=data_lancamento
+            nome = nome,
+            genero = genero,
+            artista = artista,
+            data_lancamento = data_lancamento,
+            musicas = musicas
         )
 
         # Adicionar e salvar no banco de dados

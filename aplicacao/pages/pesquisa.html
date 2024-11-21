@@ -2,32 +2,43 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="pesquisa.css">
     <title>Pesquisa de Aplicativos</title>
 </head>
 <body>
-    <h1>Pesquisa de Aplicativos</h1>
-    <form method="POST">
-        <input type="text" name="nome" placeholder="Digite o nome do aplicativo" required>
-        <button type="submit">Pesquisar</button>
-    </form>
+    <div class="container">
+        <header>
+            <h1>Pesquisa de Álbums</h1>
+            <p>Encontre o álbum que você deseja</p>
+        </header>
 
-    {% if aplicativos %}
-        <h2>Resultados da Pesquisa:</h2>
-        <ul>
-            {% for aplicativo in aplicativos %}
-                <li>
-                    <strong>{{ aplicativo.nome }}</strong><br>
-                    Descrição: {{ aplicativo.descricao }}<br>
-                    Versão: {{ aplicativo.versao }}<br>
-                    Desenvolvedor: {{ aplicativo.desenvolvedor }}<br>
-                    Data de Lançamento: {{ aplicativo.data_lancamento }}<br>
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>Nenhum aplicativo encontrado.</p>
-    {% endif %}
-    <a href="/">Voltar para a Tela Principal</a>
+        <form method="POST">
+            <div class="form-group">
+                <input type="text" name="nome" placeholder="Digite o nome do aplicativo" required>
+                <button type="submit" class="music-btn">Pesquisar</button>
+            </div>
+        </form>
+
+        {% if aplicativos %}
+            <section class="results">
+                <h2>Resultados da Pesquisa:</h2>
+                <ul>
+                    {% for aplicativo in aplicativos %}
+                        <li class="app-card">
+                            <strong>{{ aplicativo.nome }}</strong><br>
+                            <span>Descrição: {{ aplicativo.descricao }}</span><br>
+                            <span>Versão: {{ aplicativo.versao }}</span><br>
+                            <span>Desenvolvedor: {{ aplicativo.desenvolvedor }}</span><br>
+                            <span>Data de Lançamento: {{ aplicativo.data_lancamento }}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% else %}
+            <p class="no-results">Nenhum aplicativo encontrado.</p>
+        {% endif %}
+
+        <a href="index.html" class="back-link">Voltar para a Tela Principal</a>
+    </div>
 </body>
 </html>
-
