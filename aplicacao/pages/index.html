@@ -7,15 +7,56 @@
     <title>Tela Principal</title>
 </head>
 <body>
-    <h1>Somzera</h1>
-    <p>Escolha uma das opções abaixo:</p>
-    <div class="button-container">
-        <button onclick="window.location.href='cadastro.html'">Cadastrar Novo Álbum</button>
-        <button onclick="window.location.href='pesquisa.html'">Pesquisar Álbum</button>
-        <button onclick="window.location.href='carga.html'">Importar Álbum</button>
-        <button onclick="window.location.href='exportacao.html'">Exportar Álbum</button>
-        <button onclick="window.location.href='download_files.html'">Download de Arquivos</button>
+    <div class="container">
+        <header>
+            <h1>Somzera</h1>
+            <p>Escolha uma das opções abaixo para gerenciar seus álbuns:</p>
+        </header>
+
+        <div class="button-container">
+            <button class="music-btn" onclick="window.location.href='cadastro.html'">
+                <i class="fas fa-music"></i> Cadastrar Novo Álbum
+            </button>
+            <button class="music-btn" onclick="window.location.href='pesquisa.html'">
+                <i class="fas fa-search"></i> Pesquisar Álbum
+            </button>
+            <button class="music-btn" onclick="window.location.href='carga.html'">
+                <i class="fas fa-upload"></i> Importar Álbum
+            </button>
+            <button class="music-btn" onclick="window.location.href='exportacao.html'">
+                <i class="fas fa-download"></i> Exportar Álbum
+            </button>
+            <button class="music-btn" onclick="window.location.href='download_files.html'">
+                <i class="fas fa-cloud-download-alt"></i> Download de Arquivos
+            </button>
+        </div>
+
+        <section class="albums">
+            <h2>Álbuns Recentes</h2>
+            <div class="album-list">
+                <div class="album-card">
+                    <img src="https://via.placeholder.com/200x200.png?text=Álbum+1" alt="Álbum 1">
+                    <p>Álbum 1</p>
+                </div>
+                <div class="album-card">
+                    <img src="https://via.placeholder.com/200x200.png?text=Álbum+2" alt="Álbum 2">
+                    <p>Álbum 2</p>
+                </div>
+                <div class="album-card">
+                    <img src="https://via.placeholder.com/200x200.png?text=Álbum+3" alt="Álbum 3">
+                    <p>Álbum 3</p>
+                </div>
+                <div class="album-card">
+                    <img src="https://via.placeholder.com/200x200.png?text=Álbum+4" alt="Álbum 4">
+                    <p>Álbum 4</p>
+                </div>
+                <div class="album-card">
+                    <img src="https://via.placeholder.com/200x200.png?text=Álbum+5" alt="Álbum 5">
+                    <p>Álbum 5</p>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Ícones FontAwesome -->
 </body>
 </html>
-
