@@ -1,16 +1,168 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
+
+/* Corpo da página */
+body {
+    background: linear-gradient(135deg, #6a0dad, #2f2f2f); /* Gradiente roxo e preto */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+/* Container principal */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+}
+
+/* Cabeçalho */
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ddd;
+}
+
+/* Estilo dos botões de ação */
 .button-container {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
+    margin-bottom: 40px;
 }
-.button-container button {
-    padding: 10px 20px;
-    font-size: 16px;
+
+button.music-btn {
+    background-color: #3b3b3b; /* Roxo */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 200px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+button.music-btn i {
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+
+button.music-btn:hover {
+    background-color:#666666; /* Roxo mais claro no hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px);
+}
+
+button.music-btn:active {
+    background-color: #000000; /* Roxo escuro ao clicar */
+    transform: translateY(2px);
+}
+
+/* Estilo para a seção de álbuns */
+.albums {
+    width: 100%;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.album-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.album-card {
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.album-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.album-card p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.album-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    button.music-btn {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+
+    .album-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.875rem;
+    }
+
+    button.music-btn {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+
+    .album-card {
+        width: 180px;
+    }
 }
