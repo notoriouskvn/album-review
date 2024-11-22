@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Importar Álbum</title>
-    <link rel="stylesheet" href="importacao.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/importacao.css') }}">
 </head>
 <body>
     <h1>Importar Álbum</h1>
@@ -11,6 +11,6 @@
         <input type="file" name="file" id="file" accept=".json" required>
         <button type="submit">Carregar Dados</button>
     </form>
-    <a href="../index.html" class="back-link">Voltar para a Tela Principal</a>
+    <a href="{{ url_for('home') }}" class="back-link">Voltar para a Tela Principal</a>
 </body>
 </html>

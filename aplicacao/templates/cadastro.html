@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
     <title>Cadastro de Álbum</title>
 </head>
 <body> 
@@ -28,7 +28,7 @@
             <input type="submit" value="Cadastrar"> 
         </form>
         <br>
-        <a href="../index.html" class="back-link">Voltar para a Tela Principal</a>
+        <a href="{{ url_for('home') }}" class="back-link">Voltar para a Tela Principal</a>
     </div>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="exportacao.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/exportacao.css') }}">
     <title>Exportar Álbums</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
             <button type="submit" class="music-btn">Exportar Álbum</button>
         </form>
 
-        <a href="../index.html" class="back-link">Voltar para a Tela Inicial</a>
+        <a href="{{ url_for('home') }}" class="back-link">Voltar para a Tela Principal</a>
     </div>
 </body>
 </html>

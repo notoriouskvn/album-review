@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="pesquisa.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pesquisa.css') }}">
     <title>Pesquisa de Aplicativos</title>
 </head>
 <body>
@@ -19,26 +19,32 @@
             </div>
         </form>
 
-        {% if álbuns %}
+        {% if albuns %}
             <section class="results">
                 <h2>Resultados da Pesquisa:</h2>
                 <ul>
                     {% for album in albuns %}
                         <li class="app-card">
                             <strong>{{ album.nome }}</strong><br>
-                            <span>Genero: {{ album.genero }}</span><br>
+                            <span>Gênero: {{ album.genero }}</span><br>
                             <span>Artista: {{ album.artista }}</span><br>
                             <span>Data de Lançamento: {{ album.data_lancamento }}</span><br>
-                            <span>Musicas: {{ musicas }}</span>
+                            <span>Músicas:</span>
+                            <ul>
+                                {% for musica in album.musicas %}
+                                    <li>{{ musica }}</li>
+                                {% endfor %}
+                            </ul>
                         </li>
                     {% endfor %}
                 </ul>
             </section>
         {% else %}
-            <p class="no-results">Nenhum album encontrado.</p>
+            <p class="no-results">Nenhum álbum encontrado.</p>
         {% endif %}
-<br>
-        <a href="../index.html" class="back-link">Voltar para a Tela Principal</a>
+
+        <br>
+        <a href="{{ url_for('home') }}" class="back-link">Voltar para a Tela Principal</a>
     </div>
 </body>
 </html>

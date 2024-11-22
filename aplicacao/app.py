@@ -6,6 +6,7 @@ import pandas as pd
 from io import BytesIO
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.secret_key = 'seu_segredo_aqui'  # Necessário para usar o flash
 
 # Configuração do banco de dados
@@ -19,7 +20,7 @@ class Album(db.Model):
     genero = db.Column(db.String(50), nullable=False)
     artista = db.Column(db.String(100), nullable=False)
     data_lancamento = db.Column(db.String(10), nullable=False)
-    musicas = db.Column(db.String(1000), nullable=False)
+    musicas = db.Column(db.JSON, nullable=False)  # Agora é um campo JSON
 
 with app.app_context():
     db.create_all()
@@ -35,14 +36,14 @@ def cadastro():
         genero = request.form['genero']
         artista = request.form['artista']
         data_lancamento = request.form['data_lancamento']
-        musicas = request.form['musicas']
+        musicas = request.form.getlist('musicas')  # Usando 'getlist' para capturar múltiplas músicas como lista
 
         novo_album = Album(
             nome=nome,
             genero=genero,
             artista=artista,
             data_lancamento=data_lancamento,
-            musicas=musicas
+            musicas=musicas  # Aqui estamos passando uma lista de músicas
         )
         db.session.add(novo_album)
         db.session.commit()
@@ -78,7 +79,7 @@ def importacao():
                         genero=item['genero'],
                         artista=item['artista'],
                         data_lancamento=item['data_lancamento'],
-                        musicas=item['musicas']
+                        musicas=item['musicas']  # Assumindo que 'musicas' seja uma lista
                     )
                     db.session.add(novo_album)
                 db.session.commit()
@@ -102,7 +103,7 @@ def exportacao():
             'Gênero': album.genero,
             'Artista': album.artista,
             'Data de Lançamento': album.data_lancamento,
-            'Músicas': album.musicas
+            'Músicas': album.musicas  # 'musicas' agora é uma lista, será exportado diretamente
         } for album in albuns]
         df = pd.DataFrame(data)
         output = BytesIO()
@@ -123,4 +124,4 @@ def download_files():
     return render_template('download_files.html', files=files)
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=5000, debug=True)
+    app.run(port=5000, host='localhost', debug=True, threaded=True)
