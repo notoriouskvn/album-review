@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Usando url_for para gerar o caminho correto do CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Tela Principal</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Somzera</h1>
+            <p>Escolha uma das opções abaixo para gerenciar seus álbuns:</p>
+        </header>
+
+        <div class="button-container">
+            <button class="music-btn" onclick="window.location.href='cadastro'">
+                <i class="fas fa-music"></i> Cadastrar Novo Álbum
+            </button>
+            <button class="music-btn" onclick="window.location.href='pesquisa'">
+                <i class="fas fa-search"></i> Pesquisar Álbum
+            </button>
+            <button class="music-btn" onclick="window.location.href='importacao'">
+                <i class="fas fa-upload"></i> Importar Álbum
+            </button>
+            <button class="music-btn" onclick="window.location.href='exportacao'">
+                <i class="fas fa-download"></i> Exportar Álbum
+            </button>
+        </div>
+
+        <section class="albums">
+            <h2>Álbuns Recentes</h2>
+            <div class="album-list">
+                <div class="album-card">
+                    <!-- Usando url_for para as imagens -->
+                    <img src="{{ url_for('static', filename='images/album01.jpg') }}" alt="Álbum 1">
+                    <p>Álbum 1</p>
+                </div>
+                <div class="album-card">
+                    <img src="{{ url_for('static', filename='images/album05.jpg') }}" alt="Álbum 5">
+                    <p>Álbum 2</p>
+                </div>
+                <div class="album-card">
+                    <img src="{{ url_for('static', filename='images/album03.png') }}" alt="Álbum 3">
+                    <p>Álbum 3</p>
+                </div>
+                <div class="album-card">
+                    <img src="{{ url_for('static', filename='images/album04.jfif') }}" alt="Álbum 4">
+                    <p>Álbum 4</p>
+                </div>
+                <div class="album-card">
+                    <img src="{{ url_for('static', filename='images/album02.jpg') }}" alt="Álbum 2">
+                    <p>Álbum 5</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Ícones FontAwesome -->
+</body>
+</html>
